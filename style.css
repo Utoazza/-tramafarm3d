@@ -1,9 +1,11 @@
-/* RESET E VARIÁVEIS DE COR (Paleta Industrial Tech) */
+/* VARIÁVEIS CYBERPUNK/INDUSTRIAL */
 :root {
-    --bg-color: #2B2D42; /* Chumbo/Grafite Escuro */
-    --primary-color: #FF6B35; /* Laranja Industrial */
-    --text-light: #F8F9FA; /* Branco Neve */
-    --card-bg: #1A1B28; /* Fundo dos Cards mais escuro */
+    --bg-color: #0b0c10; /* Fundo hiper profundo (quase preto) */
+    --primary-color: #ff5722; /* Laranja vibrante principal */
+    --primary-glow: rgba(255, 87, 34, 0.6); /* Brilho de LED */
+    --text-light: #e2e2e2;
+    --card-bg: rgba(31, 40, 51, 0.4); /* Fundo tipo vidro fosco */
+    --card-border: rgba(255, 255, 255, 0.05); /* Borda muito sutil */
 }
 
 * {
@@ -12,9 +14,12 @@
     box-sizing: border-box;
 }
 
+/* FUNDO ESTILO SOFTWARE DE ENGENHARIA (CAD Grid) */
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--bg-color);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 25px 25px;
     color: var(--text-light);
     line-height: 1.6;
 }
@@ -28,9 +33,13 @@ body {
 
 /* CABEÇALHO */
 .header {
-    background-color: var(--card-bg);
+    background-color: rgba(11, 12, 16, 0.9);
+    backdrop-filter: blur(10px);
     padding: 20px 0;
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-glow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .header .container {
@@ -40,67 +49,78 @@ body {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 900;
+    letter-spacing: 1px;
 }
 
 .logo span {
     color: var(--primary-color);
+    text-shadow: 0px 0px 10px var(--primary-glow);
 }
 
 .header nav a {
     color: var(--text-light);
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 25px;
     font-weight: 700;
-    transition: color 0.3s;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
 .header nav a:hover {
     color: var(--primary-color);
+    text-shadow: 0px 0px 8px var(--primary-glow);
 }
 
-/* HERO SECTION */
+/* HERO SECTION (Topo) */
 .hero {
-    padding: 100px 0;
+    padding: 120px 0 100px 0;
 }
 
 .hero h2 {
-    font-size: 42px;
-    margin-bottom: 20px;
+    font-size: 48px;
+    margin-bottom: 25px;
+    line-height: 1.2;
 }
 
+/* EFEITO GRADIENTE NEON NO TEXTO PRINCIPAL */
 .highlight {
-    color: var(--primary-color);
+    background: linear-gradient(90deg, #ff5722, #ff9800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 4px 15px rgba(255, 87, 34, 0.3);
 }
 
 .hero p {
-    font-size: 18px;
-    max-width: 700px;
+    font-size: 19px;
+    max-width: 750px;
     margin: 0 auto 40px auto;
-    color: #cbd5e1;
+    color: #aeb5c0;
 }
 
-/* BOTÕES */
+/* BOTÕES FUTURISTAS */
 .btn-primary, .btn-secondary {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 16px 35px;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 900;
     text-decoration: none;
-    border-radius: 5px;
-    transition: transform 0.2s, background-color 0.2s;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, #ff5722, #e64a19);
     color: #fff;
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+    border: none;
+    box-shadow: 0 5px 20px var(--primary-glow);
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    background-color: #e55c2b;
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(255, 87, 34, 0.8);
 }
 
 .btn-secondary {
@@ -108,89 +128,116 @@ body {
     color: var(--primary-color);
     border: 2px solid var(--primary-color);
     margin: 10px;
+    box-shadow: 0 0 10px rgba(255, 87, 34, 0.2) inset;
 }
 
 .btn-secondary:hover {
-    background-color: var(--primary-color);
+    background-color: rgba(255, 87, 34, 0.1);
+    box-shadow: 0 0 20px var(--primary-glow) inset;
     color: #fff;
 }
 
-/* SERVIÇOS E CARDS */
+/* TÍTULOS DAS SEÇÕES */
+.section-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
 .services, .process, .marketplaces {
     padding: 80px 0;
 }
 
-.services h3, .process h3, .marketplaces h3 {
-    font-size: 32px;
-    margin-bottom: 40px;
+/* GLASSMORPHISM - EFEITO VIDRO NOS CARDS */
+.glass-effect {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 40px 30px;
 }
 
 .grid {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .card {
-    background-color: var(--card-bg);
-    padding: 30px;
-    border-radius: 8px;
     flex: 1;
-    min-width: 250px;
+    min-width: 280px;
     border-top: 4px solid var(--primary-color);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px var(--primary-glow);
+    border-color: #ff9800;
 }
 
 .card h4 {
-    margin-bottom: 15px;
-    font-size: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #fff;
 }
 
-/* PROCESSO (COMO FUNCIONA) */
+/* PASSOS DO PROCESSO */
 .process-steps {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .step {
     flex: 1;
-    min-width: 250px;
+    min-width: 260px;
 }
 
 .step-number {
-    background-color: var(--primary-color);
-    color: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0 auto 15px auto;
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-shadow: 0px 0px 15px var(--primary-glow);
+}
+
+/* BANNER LOJAS */
+.banner-lojas {
+    border: 1px solid rgba(255, 87, 34, 0.3);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.banner-lojas p {
+    margin-bottom: 30px;
+    font-size: 18px;
 }
 
 /* RODAPÉ */
 .footer {
-    background-color: var(--card-bg);
-    padding: 30px 0;
+    background-color: rgba(11, 12, 16, 0.95);
+    padding: 40px 0;
     font-size: 14px;
-    color: #8D99AE;
+    color: #66fcf1; /* Tom neon sutil para textos de rodapé */
+    border-top: 1px solid #1f2833;
 }
 
-/* RESPONSIVIDADE (Para ficar bonito no celular) */
+/* RESPONSIVIDADE (Celular) */
 @media (max-width: 768px) {
     .header .container {
         flex-direction: column;
         gap: 15px;
     }
     .hero h2 {
-        font-size: 32px;
+        font-size: 34px;
     }
     .grid, .process-steps {
         flex-direction: column;
+    }
+    .card:hover {
+        transform: translateY(-5px);
     }
 }
