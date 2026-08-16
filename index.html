@@ -6,6 +6,8 @@
     <title>Trama Farm 3D | Prototipagem e Peças Sob Medida</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Biblioteca de Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -14,76 +16,83 @@
         <div class="container">
             <h1 class="logo">TRAMA <span>FARM 3D</span></h1>
             <nav>
-                <a href="#servicos">Nossas Soluções</a>
+                <a href="#servicos">Soluções</a>
+                <a href="#galeria">Galeria</a>
                 <a href="#como-funciona">Como Funciona</a>
             </nav>
         </div>
     </header>
 
-    <!-- HERO SECTION (A Primeira Impressão) -->
+    <!-- HERO SECTION (Vitrine Principal) -->
     <section class="hero">
-        <div class="container">
-            <h2>Transformamos ideias em <span class="highlight">peças reais</span> de alta resistência.</h2>
-            <p>Prototipagem rápida, peças de reposição industrial (ABS/ASA), troféus para e-sports e brindes corporativos impressos com tecnologia de ponta Creality K1C.</p>
-            
-            <!-- Botão com o WhatsApp Oficial -->
-            <a href="https://wa.me/5554992237004?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20com%20a%20Trama%20Farm%203D." class="btn-primary" target="_blank">Solicite um Orçamento Rápido</a>
+        <div class="container hero-split">
+            <div class="hero-text">
+                <h2>O futuro da prototipagem em <span class="highlight">suas mãos.</span></h2>
+                <p>Peças técnicas, reposição industrial, troféus para e-sports e suportes de alta precisão impressos com tecnologia de ponta.</p>
+                <a href="https://wa.me/5554992237004?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20com%20a%20Trama%20Farm%203D." class="btn-primary" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento
+                </a>
+            </div>
+            <div class="hero-image">
+                <!-- Imagem futurista de destaque (Substituir depois por uma foto de uma peça épica) -->
+                <div class="image-placeholder">
+                    <i class="fa-solid fa-cube"></i>
+                    <p>Espaço para Foto Principal 3D</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- SERVIÇOS E PRODUTOS -->
+    <!-- SERVIÇOS -->
     <section id="servicos" class="services">
         <div class="container">
             <h3 class="section-title">O que nós produzimos</h3>
             <div class="grid">
                 <div class="card glass-effect">
+                    <i class="fa-solid fa-gear card-icon"></i>
                     <h4>Engenharia e Indústria</h4>
-                    <p>Reposição de engrenagens, suportes automotivos e peças técnicas em polímeros de alta resistência mecânica e térmica.</p>
+                    <p>Engrenagens e peças técnicas em polímeros de alta resistência mecânica para o seu maquinário.</p>
                 </div>
                 <div class="card glass-effect">
-                    <h4>Brindes Corporativos</h4>
-                    <p>Chaveiros de alto padrão, caixas organizadoras modulares para imobiliárias e brindes para feiras de negócios.</p>
+                    <i class="fa-solid fa-building card-icon"></i>
+                    <h4>Brindes e Corporativo</h4>
+                    <p>Chaveiros premium e caixas organizadoras modulares para feiras e imobiliárias.</p>
                 </div>
                 <div class="card glass-effect">
+                    <i class="fa-solid fa-gamepad card-icon"></i>
                     <h4>Setup & E-Sports</h4>
-                    <p>Suportes anti-sag, painéis para servidores cloud e troféus texturizados para competições.</p>
+                    <p>Suportes estruturais, painéis para servidores cloud e troféus exclusivos para competições.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- COMO FUNCIONA O FUNIL -->
-    <section id="como-funciona" class="process">
+    <!-- GALERIA DE FOTOS (NOVO) -->
+    <section id="galeria" class="gallery">
         <div class="container">
-            <h3 class="section-title">Como Funciona?</h3>
-            <div class="process-steps">
-                <div class="step glass-effect">
-                    <div class="step-number glow-text">1</div>
-                    <h4>Envie sua Ideia</h4>
-                    <p>Mande fotos da peça quebrada, projeto CAD ou medidas via WhatsApp.</p>
-                </div>
-                <div class="step glass-effect">
-                    <div class="step-number glow-text">2</div>
-                    <h4>Projeto e Orçamento</h4>
-                    <p>Analisamos a viabilidade técnica e escolhemos o filamento correto para a sua necessidade.</p>
-                </div>
-                <div class="step glass-effect">
-                    <div class="step-number glow-text">3</div>
-                    <h4>Produção e Envio</h4>
-                    <p>Impressão rápida e precisa, com envio para todo o Brasil (ou retirada local em Erechim).</p>
-                </div>
+            <h3 class="section-title">Nossos Trabalhos</h3>
+            <p class="gallery-desc">Confira algumas de nossas peças produzidas recentemente.</p>
+            <div class="gallery-grid">
+                <!-- Caixas de imagens que vocês vão preencher depois -->
+                <div class="gallery-item glass-effect"><span>Foto 1</span></div>
+                <div class="gallery-item glass-effect"><span>Foto 2</span></div>
+                <div class="gallery-item glass-effect"><span>Foto 3</span></div>
+                <div class="gallery-item glass-effect"><span>Foto 4</span></div>
+                <div class="gallery-item glass-effect"><span>Foto 5</span></div>
+                <div class="gallery-item glass-effect"><span>Foto 6</span></div>
             </div>
         </div>
     </section>
 
-    <!-- LINKS PARA MARKETPLACES -->
+    <!-- LINKS PARA MARKETPLACES E REDES -->
     <section class="marketplaces">
         <div class="container glass-effect banner-lojas">
             <h3>Procurando itens de catálogo?</h3>
-            <p>Acesse nossas lojas parceiras para envios rápidos de utilidades e suportes padronizados.</p>
+            <p>Compre direto de nossas lojas com segurança e envio para todo o país.</p>
             <div class="lojas-botoes">
-                <a href="#" class="btn-secondary">Loja Mercado Livre</a>
-                <a href="#" class="btn-secondary">Loja Shopee</a>
+                <a href="#" class="btn-secondary"><i class="fa-solid fa-handshake"></i> Mercado Livre</a>
+                <a href="#" class="btn-secondary"><i class="fa-solid fa-bag-shopping"></i> Loja Shopee</a>
+                <a href="#" class="btn-instagram"><i class="fa-brands fa-instagram"></i> Siga no Instagram</a>
             </div>
         </div>
     </section>
@@ -91,8 +100,8 @@
     <!-- RODAPÉ -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Trama Farm 3D. Todos os direitos reservados.</p>
-            <p>E-mail: contato@tramafarm3d.com.br | Instagram: @tramafarm3d</p>
+            <p>&copy; 2026 Trama Farm 3D. CNPJ e Todos os direitos reservados.</p>
+            <p>📍 Erechim, RS | 📧 contato@tramafarm3d.com.br</p>
         </div>
     </footer>
 
