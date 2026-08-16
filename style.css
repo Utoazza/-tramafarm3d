@@ -1,11 +1,12 @@
-/* VARIÁVEIS CYBERPUNK/INDUSTRIAL */
+/* VARIÁVEIS CYBERPUNK (Roxo Neon e Ciano) */
 :root {
-    --bg-color: #0b0c10; /* Fundo hiper profundo (quase preto) */
-    --primary-color: #ff5722; /* Laranja vibrante principal */
-    --primary-glow: rgba(255, 87, 34, 0.6); /* Brilho de LED */
-    --text-light: #e2e2e2;
-    --card-bg: rgba(31, 40, 51, 0.4); /* Fundo tipo vidro fosco */
-    --card-border: rgba(255, 255, 255, 0.05); /* Borda muito sutil */
+    --bg-color: #05050a; /* Preto super profundo */
+    --primary-color: #9d4edd; /* Roxo Futurista */
+    --primary-glow: rgba(157, 78, 221, 0.6);
+    --accent-color: #00f2fe; /* Azul Ciano Neon */
+    --text-light: #f0f0f5;
+    --card-bg: rgba(20, 15, 30, 0.6); /* Vidro Roxo Escuro */
+    --card-border: rgba(157, 78, 221, 0.2);
 }
 
 * {
@@ -14,12 +15,13 @@
     box-sizing: border-box;
 }
 
-/* FUNDO ESTILO SOFTWARE DE ENGENHARIA (CAD Grid) */
+/* FUNDO GRID ESTILO PROJETO 3D */
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--bg-color);
-    background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-    background-size: 25px 25px;
+    background-image: linear-gradient(rgba(157, 78, 221, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(157, 78, 221, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
     color: var(--text-light);
     line-height: 1.6;
 }
@@ -33,10 +35,10 @@ body {
 
 /* CABEÇALHO */
 .header {
-    background-color: rgba(11, 12, 16, 0.9);
-    backdrop-filter: blur(10px);
+    background-color: rgba(5, 5, 10, 0.85);
+    backdrop-filter: blur(15px);
     padding: 20px 0;
-    border-bottom: 1px solid var(--primary-glow);
+    border-bottom: 1px solid var(--card-border);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -56,7 +58,7 @@ body {
 
 .logo span {
     color: var(--primary-color);
-    text-shadow: 0px 0px 10px var(--primary-glow);
+    text-shadow: 0px 0px 15px var(--primary-glow);
 }
 
 .header nav a {
@@ -64,45 +66,91 @@ body {
     text-decoration: none;
     margin-left: 25px;
     font-weight: 700;
-    transition: color 0.3s, text-shadow 0.3s;
+    transition: all 0.3s;
 }
 
 .header nav a:hover {
-    color: var(--primary-color);
-    text-shadow: 0px 0px 8px var(--primary-glow);
+    color: var(--accent-color);
+    text-shadow: 0px 0px 8px var(--accent-color);
 }
 
-/* HERO SECTION (Topo) */
+/* HERO SECTION SPLIT (Texto de um lado, imagem do outro) */
 .hero {
-    padding: 120px 0 100px 0;
+    padding: 100px 0;
 }
 
-.hero h2 {
-    font-size: 48px;
+.hero-split {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h2 {
+    font-size: 46px;
     margin-bottom: 25px;
     line-height: 1.2;
 }
 
-/* EFEITO GRADIENTE NEON NO TEXTO PRINCIPAL */
 .highlight {
-    background: linear-gradient(90deg, #ff5722, #ff9800);
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0px 4px 15px rgba(255, 87, 34, 0.3);
+    text-shadow: 0px 4px 20px rgba(0, 242, 254, 0.3);
 }
 
-.hero p {
-    font-size: 19px;
-    max-width: 750px;
-    margin: 0 auto 40px auto;
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 40px;
     color: #aeb5c0;
 }
 
-/* BOTÕES FUTURISTAS */
-.btn-primary, .btn-secondary {
-    display: inline-block;
-    padding: 16px 35px;
-    font-size: 18px;
+/* IMAGEM FLUTUANTE 3D */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-placeholder {
+    width: 100%;
+    max-width: 400px;
+    height: 350px;
+    background: linear-gradient(135deg, rgba(157,78,221,0.1), rgba(0,242,254,0.1));
+    border: 2px dashed var(--primary-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    box-shadow: 0 0 30px var(--primary-glow);
+    animation: float 4s ease-in-out infinite;
+}
+
+.image-placeholder i {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* BOTÕES (Com Ícones) */
+.btn-primary, .btn-secondary, .btn-instagram {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    font-size: 16px;
     font-weight: 900;
     text-decoration: none;
     border-radius: 8px;
@@ -112,52 +160,67 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #ff5722, #e64a19);
+    background: linear-gradient(135deg, #7b2cbf, #9d4edd);
     color: #fff;
     border: none;
     box-shadow: 0 5px 20px var(--primary-glow);
 }
 
 .btn-primary:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 10px 30px rgba(255, 87, 34, 0.8);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(157, 78, 221, 0.8);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: var(--text-light);
+    border: 1px solid var(--primary-color);
     margin: 10px;
-    box-shadow: 0 0 10px rgba(255, 87, 34, 0.2) inset;
 }
 
 .btn-secondary:hover {
-    background-color: rgba(255, 87, 34, 0.1);
-    box-shadow: 0 0 20px var(--primary-glow) inset;
-    color: #fff;
+    background-color: rgba(157, 78, 221, 0.2);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
 }
 
-/* TÍTULOS DAS SEÇÕES */
+.btn-instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+    border: none;
+    margin: 10px;
+}
+
+.btn-instagram:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(188, 24, 136, 0.6);
+}
+
+/* SEÇÕES GERAIS */
 .section-title {
     font-size: 36px;
     margin-bottom: 50px;
     color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.services, .process, .marketplaces {
+.services, .gallery, .marketplaces {
     padding: 80px 0;
 }
 
-/* GLASSMORPHISM - EFEITO VIDRO NOS CARDS */
+/* EFEITO VIDRO FUTURISTA (Glassmorphism) */
 .glass-effect {
     background: var(--card-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid var(--card-border);
-    border-radius: 12px;
-    padding: 40px 30px;
+    border-radius: 15px;
+    padding: 30px;
 }
 
+/* GRID DE SERVIÇOS */
 .grid {
     display: flex;
     gap: 30px;
@@ -168,76 +231,71 @@ body {
 .card {
     flex: 1;
     min-width: 280px;
-    border-top: 4px solid var(--primary-color);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s;
+    transition: transform 0.4s, box-shadow 0.4s;
+    text-align: center;
 }
 
 .card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px var(--primary-glow);
-    border-color: #ff9800;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px var(--primary-glow);
+    border-color: var(--accent-color);
+}
+
+.card-icon {
+    font-size: 40px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
 }
 
 .card h4 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-size: 22px;
     color: #fff;
 }
 
-/* PASSOS DO PROCESSO */
-.process-steps {
+/* GRID DE GALERIA DE FOTOS */
+.gallery-desc {
+    margin-bottom: 40px;
+    color: #aeb5c0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    height: 250px;
     display: flex;
-    gap: 30px;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-}
-
-.step {
-    flex: 1;
-    min-width: 260px;
-}
-
-.step-number {
-    font-size: 40px;
-    font-weight: 900;
     color: var(--primary-color);
-    margin-bottom: 15px;
-    text-shadow: 0px 0px 15px var(--primary-glow);
-}
-
-/* BANNER LOJAS */
-.banner-lojas {
-    border: 1px solid rgba(255, 87, 34, 0.3);
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
-}
-
-.banner-lojas p {
-    margin-bottom: 30px;
+    font-weight: bold;
     font-size: 18px;
+    border-style: dashed;
+    transition: all 0.3s ease;
 }
 
-/* RODAPÉ */
-.footer {
-    background-color: rgba(11, 12, 16, 0.95);
-    padding: 40px 0;
-    font-size: 14px;
-    color: #66fcf1; /* Tom neon sutil para textos de rodapé */
-    border-top: 1px solid #1f2833;
+.gallery-item:hover {
+    border-style: solid;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background-color: rgba(0, 242, 254, 0.05);
 }
 
-/* RESPONSIVIDADE (Celular) */
+/* RESPONSIVIDADE PARA CELULAR */
 @media (max-width: 768px) {
+    .hero-split {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text h2 {
+        font-size: 34px;
+    }
     .header .container {
         flex-direction: column;
         gap: 15px;
-    }
-    .hero h2 {
-        font-size: 34px;
-    }
-    .grid, .process-steps {
-        flex-direction: column;
-    }
-    .card:hover {
-        transform: translateY(-5px);
     }
 }
