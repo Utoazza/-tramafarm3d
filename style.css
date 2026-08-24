@@ -20,11 +20,11 @@ body {
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 .text-destaque { color: var(--brand-color); }
 
-/* CABEÇALHO COM IMAGEM */
+/* CABEÇALHO COM TRAVA RIGIDA PARA A LOGO */
 .header {
     background-color: rgba(10, 10, 12, 0.95);
     border-bottom: 1px solid #1f1f2e;
-    padding: 15px 0; /* Diminuí um pouco o padding para acomodar a logo */
+    padding: 12px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -36,9 +36,19 @@ body {
     align-items: center;
 }
 
-/* Tamanho da Logo no Cabeçalho */
-.logo-link { display: flex; align-items: center; }
-.logo-img { height: 50px; width: auto; border-radius: 4px; } /* Ajuste a altura (50px) se quiser maior ou menor */
+.logo-link { 
+    display: inline-block; 
+    line-height: 0;
+}
+
+/* TRAVA DE TAMANHO: Altura fixa de 40px para nunca mais estourar */
+.logo-img { 
+    height: 40px !important; 
+    max-height: 40px !important;
+    width: auto !important; 
+    object-fit: contain;
+    border-radius: 4px; 
+} 
 
 .header nav a {
     color: var(--text-white);
