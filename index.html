@@ -3,43 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trama Farm 3D | Engenharia e Impressão 3D</title>
+    <title>Trama Farm 3D | Engenharia e Impressão 3D em Erechim</title>
+    <meta name="description" content="Prototipagem rápida, peças de reposição industrial e engenharia 3D de alta performance em Erechim - RS e envio para todo o Brasil.">
     
+    <!-- Ícone da aba do navegador (Favicon) -->
     <link rel="icon" type="image/jpeg" href="Logo.jpeg">
+    
+    <!-- Link para o arquivo de estilos -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Fontes e Ícones -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- BOTÃO FLUTUANTE DE WHATSAPP (SEMPRE VISÍVEL NO CELULAR) -->
+    <a href="https://wa.me/5554992237004?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20de%20impressão%203D." target="_blank" class="whatsapp-float" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- CABEÇALHO -->
     <header class="header">
         <div class="container header-content">
-            <!-- Agora usando a imagem do logo -->
             <a href="#" class="logo-link">
                 <img src="Logo.jpeg" alt="Logo Trama Farm 3D" class="logo-img">
             </a>
-            <nav>
+            <nav class="nav-menu">
                 <a href="#tecnologia">Tecnologia</a>
                 <a href="#servicos">Serviços</a>
-                <a href="#contato" class="btn btn-primary" style="margin-left: 20px;">Orçamento Rápido</a>
+                <a href="#contato" class="btn btn-primary btn-header">Orçamento</a>
             </nav>
         </div>
     </header>
 
-    <!-- HERO SECTION (COM VÍDEO DE FUNDO) -->
+    <!-- HERO SECTION (COM VÍDEO DE FUNDO OTIMIZADO) -->
     <section class="hero">
         <div class="video-overlay"></div>
-        <video autoplay muted loop playsinline class="hero-video">
+        <video autoplay muted loop playsinline preload="auto" class="hero-video">
             <source src="video.mp4" type="video/mp4">
             Seu navegador não suporta vídeos.
         </video>
 
         <div class="container hero-content">
             <h2>Impressão 3D e Engenharia de <span class="text-destaque">Alta Performance</span></h2>
-            <p class="subtitle">Transformamos projetos complexos em peças reais e funcionais com precisão milimétrica e materiais de ponta.</p>
+            <p class="subtitle">Transformamos projetos complexos em peças reais e funcionais com precisão milimétrica e materiais de ponta para indústrias e projetos especiais.</p>
             <div class="hero-buttons">
-                <a href="#contato" class="btn btn-primary">Fazer Orçamento</a>
+                <a href="https://wa.me/5554992237004?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento." target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Pedir Orçamento no WhatsApp</a>
+                <a href="#servicos" class="btn btn-outline">Nossos Serviços</a>
             </div>
         </div>
     </section>
@@ -49,10 +60,10 @@
         <div class="container tech-grid">
             <div class="tech-text">
                 <h3>Estrutura de <span class="text-destaque">Nível Industrial</span></h3>
-                <p>Não somos apenas impressão, somos engenharia aplicada. Garantimos resistência e acabamento superior para reposição de peças de máquinas e projetos exclusivos.</p>
+                <p>Não somos apenas impressão, somos engenharia aplicada. Garantimos resistência mecânica superior para reposição de peças de máquinas, protótipos e componentes exclusivos.</p>
                 <ul class="tech-list">
                     <li><i class="fas fa-check-circle text-destaque"></i> Materiais de Alta Resistência (PETG, ABS, TPU)</li>
-                    <li><i class="fas fa-check-circle text-destaque"></i> Modelagem e Prototipagem Avançada</li>
+                    <li><i class="fas fa-check-circle text-destaque"></i> Modelagem e Prototipagem Avançada (CAD)</li>
                     <li><i class="fas fa-check-circle text-destaque"></i> Produção em Larga Escala e Sob Demanda</li>
                 </ul>
             </div>
@@ -67,34 +78,34 @@
     <section id="servicos" class="services">
         <div class="container">
             <h3 class="section-title">Soluções Completas</h3>
-            <p class="section-desc">Da modelagem digital à entrega da peça finalizada.</p>
+            <p class="section-desc">Da modelagem digital à entrega da peça finalizada com rigor técnico.</p>
             
             <div class="card-grid">
                 <div class="card">
                     <i class="fas fa-cogs card-icon"></i>
                     <h4>Reposição Industrial</h4>
-                    <p>Fabricação de engrenagens e componentes fora de linha com resistência mecânica para maquinário pesado.</p>
+                    <p>Fabricação de engrenagens e componentes fora de linha com alta resistência mecânica para o seu maquinário.</p>
                 </div>
                 <div class="card">
                     <i class="fas fa-cube card-icon"></i>
                     <h4>Prototipagem Rápida</h4>
-                    <p>Valide sua ideia antes da fabricação em massa. Modelos de teste precisos e econômicos.</p>
+                    <p>Valide o seu projeto antes de investir em moldes caros. Modelos funcionais precisos e ágeis.</p>
                 </div>
                 <div class="card">
                     <i class="fas fa-drafting-compass card-icon"></i>
                     <h4>Projetos Especiais</h4>
-                    <p>Criação de suportes sob medida, peças decorativas exclusivas e adaptações técnicas.</p>
+                    <p>Desenvolvimento de suportes técnicos sob medida, peças de engenharia e soluções personalizadas.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTATO E LINKS -->
+    <!-- CONTATO E CANAIS -->
     <section id="contato" class="marketplaces">
         <div class="container">
             <div class="cta-box">
                 <h2>Faça um orçamento sem compromisso</h2>
-                <p>Atendemos Erechim, região e enviamos para todo o Brasil. Resposta rápida e técnica.</p>
+                <p>Atendemos Erechim, região e enviamos para todo o Brasil. Atendimento técnico especializado.</p>
                 <div class="action-buttons">
                     <a href="https://wa.me/5554992237004" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     <a href="mailto:contato@tramafarm3d.com.br" class="btn btn-primary"><i class="fas fa-envelope"></i> E-mail</a>
@@ -102,7 +113,7 @@
                     <a href="https://shopee.com.br/tramafarm3d" target="_blank" class="btn btn-shopee"><i class="fas fa-shopping-cart"></i> Shopee</a>
                     <a href="https://www.instagram.com/tramafarm3d" target="_blank" class="btn btn-insta"><i class="fab fa-instagram"></i> Instagram</a>
                 </div>
-                <p style="margin-top: 20px; font-weight: bold; color: var(--text-white);">contato@tramafarm3d.com.br</p>
+                <p style="margin-top: 25px; font-weight: bold; color: var(--text-white); font-size: 18px;">contato@tramafarm3d.com.br | (54) 99223-7004</p>
             </div>
         </div>
     </section>
